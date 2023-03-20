@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: #f4f4f4;
+}
+
+input, textarea, select {
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #847373;
+}
+
+.wrap {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.main {
+    font-size: 1.8rem;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: #ca2525;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form > div {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    color: #847373;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name input {
+    flex: 1;
+    max-width: 80%;
+}
+
+.sex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sex > div {
+    flex: 1;
+    display: flex;
+    max-width: 80%;
+}
+
+input[type=radio], input[type=checkox] {
+    margin-right: 5px;
+}
+
+.sex label[for=male] {
+    margin-right: 20px;
+}
+
+.password,
+.confirm,
+.email,
+.message,
+.date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.wrap__date {
+    flex: 1;
+    max-width: 80%;
+    display: flex;
+}
+
+.day, .month, .year {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 22%;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.day i, .month i, .year i {
+    margin-right: 10px;
+}
+
+.day select, .month select, .year select {
+    width: 100%;
+    padding: 8px 10px;
+    border: none;
+    /* background-color: white; */
+}
+
+.password input,
+.confirm input,
+.email input,
+.message textarea {
+    flex: 1;
+    max-width: 80%;
+    border: 1px solid #ccc;
+}
+
+.message {
+    align-items: unset;
+}
+
+.accept {
+    max-width: 80%;
+    margin-left: auto;
+}
+
+.action {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.action button {
+    width: 140px;
+    height: 40px;
+    margin: 0 5px;
+    font-size: 16px;
+    color: white;
+    background-color: #ca2525;
+    border: none;
+    border-radius: 4px;
+}
+
+@media (max-width: 1266px) {
+    .wrap {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .wrap {
+        width: 90%;
+    }
+}
+
+@media (max-width: 860px) {
+    .name input, .sex > div, .wrap__date, 
+    .accept, .password input, .confirm input,
+    .email input, .message textarea{
+        max-width: 60%;
+    }
+
+    .day, .month, .year {
+        width: 100%;
+    }
+    
+    .year {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 580px) {
+    .main {
+        overflow-y: unset;
+    }
+
+    .name, .password, .confirm,
+    .email, .message, .date, .sex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .name input, .wrap__date, 
+    .accept, .password input, .confirm input,
+    .email input, .message textarea{
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    
+    .wrap__date {
+        flex-direction: column;
+    }
+
+    .day, .month, .year {
+        margin-bottom: 10px;
+    }
+
+    .sex div label{
+        margin-bottom: 0;
+    }
+
+    label {
+        margin-bottom: 8px;
+    }
+
+}

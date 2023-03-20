@@ -1,0 +1,140 @@
+:root {
+    --height_header: 8rem;
+    --height_navbar: 8rem;
+    --height_banner: 8rem;
+    --height_footer: 10rem;
+    --width_logo: 26rem;
+    --width_action: 30rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    text-align: center;
+}
+
+.main {
+    font-size: 1.4rem;
+}
+
+header {
+    display: flex;
+    min-height: var(--height_header);
+    line-height: var(--height_header);
+}
+
+.header__wrap {
+    display: flex;
+    flex: 1;
+}
+
+.header__logo {
+    line-height: var(--height_header);
+    width: var(--width_logo);
+    background-color: rgb(202, 221, 240);
+}
+
+.header__template_name {
+    line-height: var(--height_header);
+    flex: 1;    
+    background-color: rgb(232, 197, 197);
+}
+
+.header__action {
+    line-height: var(--height_header);
+    width: var(--width_action);
+    background-color: rgb(234, 217, 205);
+}
+
+
+nav {
+    min-height: var(--height_navbar);
+    display: flex;
+    line-height: var(--height_navbar);
+}
+
+.nav__menu {
+    width: calc(100vw - var(--width_action));
+    background-color: rgb(178, 212, 179);
+}
+
+.nav__search {
+    flex: 1;
+    background-color: rgb(178, 228, 227);
+}
+
+.banner {
+    height: var(--height_banner);
+    line-height: var(--height_banner);
+    background-color: rgb(216, 196, 235);
+}
+
+.content {
+    min-height: calc(100vh - var(--height_header) - var(--height_navbar) - var(--height_banner) - var(--height_footer));
+    line-height: calc(100vh - var(--height_header) - var(--height_navbar) - var(--height_banner) - var(--height_footer));
+    display: flex;
+}
+
+aside {
+    width: 15rem;
+    background-color: rgb(164, 180, 177);
+}
+
+.content__center {
+    flex: 1;
+    background-color: rgb(211, 198, 179);
+}
+
+
+
+footer {
+    height: var(--height_footer);
+    line-height: var(--height_footer);
+    background-color: rgb(221, 181, 166);
+}
+
+
+@media (max-width : 768px) {
+    header {
+        flex-direction: column;
+    } 
+
+    .header__logo {
+        width: 100%;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width : 640px) {
+    .header__wrap {
+        flex-direction: column;
+    }
+
+    .header__action {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .nav__menu {
+        width: 100%;
+    }
+
+    
+}
